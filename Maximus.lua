@@ -6,6 +6,5 @@ end
   function Lib.TeleportPlace(id)
     game:GetService("TeleportService"):Teleport(id)
   end
-end
 
 return Lib

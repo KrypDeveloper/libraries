@@ -1,6 +1,6 @@
-Lib = {
-  state = true
-}
+Lib = {}
+
+Lib.state = true
 
 function Lib.TeleportPlayer(x, y, z)
   if Lib.state == true then

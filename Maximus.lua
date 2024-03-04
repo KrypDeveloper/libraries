@@ -1,4 +1,6 @@
-Lib = {}
+Lib = {
+  PlayerName = game.Players.LocalPlayer.Name
+}
 
 function Lib.TeleportPlayer(x, y, z)
   game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(x, y, z))

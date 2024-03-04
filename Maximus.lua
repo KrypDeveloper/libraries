@@ -1,31 +1,31 @@
 Lib = {}
 
-Lib.state = true
-
 function Lib.TeleportPlayer(x, y, z)
-  if Lib.state == true then
   game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(x, y, z))
-  end
 end
 
 function Lib.TeleportPlace(id)
-  if Lib.state == true then
     game:GetService("TeleportService"):Teleport(id)
-  end
-end
-
-function Lib.Desable()
-  Lib.state = false
-end
-
-function Lib.Active()
-  Lib.state = true
 end
 
 function Lib.KillPlayer()
-  if Lib.state == true
   game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").Health = 0
-  end
+end
+
+function Lib.Load(link)
+  loadstring(game:HttpGet(link))()
+end
+
+function Lib.IY()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end
+
+function Lib.RemoveGui()
+  game.Players.LocalPlayer:FindFirstChild("PlayerGui"):ClearAllChildren()
+end
+
+function Lib.SetSpeed(speed)
+  game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = speed
 end
 
 return Lib

@@ -28,6 +28,4 @@ function Lib.KillPlayer()
   end
 end
 
-function Lib.Init()
 return Lib
-end

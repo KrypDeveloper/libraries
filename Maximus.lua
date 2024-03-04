@@ -28,16 +28,8 @@ function Lib.SetSpeed(speed)
   game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = speed
 end
 
-function Lib.AdvancedEditor(states, value, type)
-  if states == true
-    if value > 30
-      print("the limiter is 30 please desable limiter for more")
-    else
-      game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")[type] = value
-    end
-  elseif states == false
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")[type] = value
-    end
+function Lib.Anchor(state)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = state
 end
 
 return Lib

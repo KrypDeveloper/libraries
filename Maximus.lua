@@ -6,6 +6,14 @@ function Lib.TeleportPlayer(x, y, z)
   game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(x, y, z))
 end
 
+function Lib.getpos()
+  return game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end
+
+function Lib.getid()
+  return game.PlaceId
+end
+
 function Lib.TeleportPlace(id)
     game:GetService("TeleportService"):Teleport(id)
 end

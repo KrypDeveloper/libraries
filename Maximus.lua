@@ -14,6 +14,19 @@ function Lib.getid()
   return game.PlaceId
 end
 
+function Lib.TweenTp(x, y, z, speed)
+local tween_s = game:GetService('TweenService')
+local tweeninfo = TweenInfo.new(speed,Enum.EasingStyle.Linear)
+local lp = game.Players.LocalPlayer
+
+    if lp.Character and 
+    lp.Character:FindFirstChild('HumanoidRootPart') then
+        local cf = CFrame.new(Vector3.new(x, y, z))
+        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+        a:Play()
+    end
+end
+
 function Lib.TeleportPlace(id)
     game:GetService("TeleportService"):Teleport(id)
 end

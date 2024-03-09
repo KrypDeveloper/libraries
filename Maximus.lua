@@ -55,4 +55,13 @@ function Lib.Anchor(state)
   game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = state
 end
 
+function Lib.sendtext(text)
+  local args = {
+    [1] = text,
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+
 return Lib

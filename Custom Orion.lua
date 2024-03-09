@@ -4,7 +4,6 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
-
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
@@ -19,8 +18,16 @@ local OrionLib = {
 			Text = Color3.fromRGB(0, 255, 255),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
+		Dracula = {
+			Main = Color3.fromRGB(25, 25, 25),
+			Second = Color3.fromRGB(32, 32, 32),
+			Stroke = Color3.fromRGB(255, 0, 0),
+			Divider = Color3.fromRGB(60, 60, 60),
+			Text = Color3.fromRGB(255, 0, 0),
+			TextDark = Color3.fromRGB(150, 150, 150)
+		}
 	},
-	SelectedTheme = "Default",
+	SelectedTheme = _G.theme,
 	Folder = nil,
 	SaveCfg = false
 }

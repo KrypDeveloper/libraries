@@ -1,65 +1,95 @@
-Hey thank you for using GPTLibrary
-GPTLibrary is a Library created by ChatGPT based in sirius library
-have here simple commands
--------------------------------------------------------------------------------------------------------------------------------------------------
-BOOT THE LIBRARY
+# Documentação da Library para LSU(Lua Scripting Utility)
 
-----------------------------------------------------------------------------------------------------------------------------------------------------
+## Introdução
+Esta library foi desenvolvida para facilitar o desenvolvimento de jogos no Roblox, fornecendo uma série de funções úteis para manipular personagens, posições, GUIs e muito mais.
 
-local GPTLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/GPTLibrary.lua"))()
+## Uso Básico
+Para utilizar esta library, siga os passos abaixo:
 
------------------------------------------------------------------------------------------------------------------------------------------------
+1. Faça o carregamento da library no seu script Roblox:
 
-START THE LIBRARY
+```lua
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+```
 
-----------------------------------------------------------------------------------------------------------------------------------------------------
+2. Use as funções fornecidas conforme necessário.
 
-GPTLibrary:Initialize()
+## Funções Disponíveis
 
-----------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.TeleportPlayer(x, y, z)
+Teleporta o jogador para as coordenadas especificadas.
 
-CREATE WINDOW
+- Parâmetros:
+  - `x`: Coordenada X
+  - `y`: Coordenada Y
+  - `z`: Coordenada Z
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.getpos()
+Obtém a posição atual do jogador.
 
-local Window = GPTLibrary:CreateWindow("My Script")
+- Retorna:
+  - Um vetor contendo as coordenadas XYZ da posição atual do jogador.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.getid()
+Obtém o ID do lugar atual.
 
-creating a button
+- Retorna:
+  - O ID do lugar atual.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.TweenTp(x, y, z, speed)
+Teleporta suavemente o jogador para as coordenadas especificadas utilizando uma animação de transição.
 
-Tab:CreateButton("Botão 1")
+- Parâmetros:
+  - `x`: Coordenada X
+  - `y`: Coordenada Y
+  - `z`: Coordenada Z
+  - `speed`: Velocidade da animação de transição
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.TeleportPlace(id)
+Teleporta o jogador para um lugar diferente.
 
-Connecting the Function
+- Parâmetros:
+  - `id`: ID do lugar para teleportar o jogador.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.KillPlayer()
+Mata o jogador instantaneamente.
 
-Tab:CreateButton("Botão 1"):Connect(function()
-    -- Seu código a ser executado quando o botão for pressionado
-    print("I PRESSED BUTTON 1!!!")
-end)
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+### LSU.Load(link)
+Carrega e executa um script externo.
 
-START LIBRARY
+- Parâmetros:
+  - `link`: URL do script externo a ser carregado.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-GPTLibrary:Start()
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-Script Example😎
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-local GPTLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/GPTLibrary.lua"))()
+### LSU.IY()
+Carrega e executa o Infinite Yield, uma poderosa ferramenta de administração.
 
-GPTLibrary:Initialize()
-GPTLibrary:Start()
+### LSU.RemoveGui()
+Remove todas as GUIs do jogador.
 
-local Window = GPTLibrary:CreateWindow("Example")
-local Section = Window:CreateTab("My Section")
+### LSU.SetSpeed(speed)
+Define a velocidade de caminhada do jogador.
 
-Section:CreateButton("Button1"):Connect(function()
-    print("WOAH")
-end)
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+- Parâmetros:
+  - `speed`: Velocidade de caminhada desejada.
+
+### LSU.Anchor(state)
+Define se o jogador está ancorado (fixo no lugar) ou não.
+
+- Parâmetros:
+  - `state`: `true` para ancorar o jogador, `false` para desancorar.
+
+## Exemplo de Uso
+
+```lua
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Maximus.lua"))()
+
+-- Teleporta o jogador para as coordenadas (10, 20, 30)
+LSU.TeleportPlayer(10, 20, 30)
+
+-- Obtém a posição atual do jogador
+local currentPosition = LSU.getpos()
+print("Posição atual do jogador:", currentPosition)
+
+-- Carrega e executa um script externo
+LSU.Load("https://example.com/myscript.lua")
+```

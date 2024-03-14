@@ -101,7 +101,6 @@ function Lib.Optimize()
        v:Destroy()
     end
  end
-end
 
 function Lib.MaxOptimize()
   Lib.Optimize()

@@ -82,7 +82,7 @@ function Lib.Noclip()
                 end
                 wait(0.21)
             end
-            Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+           localNoclip = game:GetService('RunService').Stepped:Connect(Nocl)
         end
         
         local function clip()

@@ -93,7 +93,7 @@ function Lib.Noclip()
         noclip()
 end
 
-Lib.Optimize()
+function Lib.Optimize()
  for i,v in pairs(workspace:GetDescendants()) do
     if v:IsA("Texture") then
        v:Destroy()
@@ -101,6 +101,11 @@ Lib.Optimize()
        v:Destroy()
     end
  end
+end
+
+function Lib.MaxOptimize()
+  Lib.Optimize()
+  Lib.RemoveGui
 end
 
 return Lib

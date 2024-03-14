@@ -46,6 +46,7 @@ end
 
 function Lib.RemoveGui()
   game.Players.LocalPlayer:FindFirstChild("PlayerGui"):ClearAllChildren()
+  game:FindFirstChild("CoreGui"):ClearAllChildren()
 end
 
 function Lib.SetSpeed(speed)
@@ -90,6 +91,16 @@ function Lib.Noclip()
         end
         
         noclip()
+end
+
+Lib.Optimize()
+ for i,v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Texture") then
+       v:Destroy()
+       elseif v:IsA("Decal") then
+       v:Destroy()
+    end
+ end
 end
 
 return Lib

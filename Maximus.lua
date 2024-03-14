@@ -104,7 +104,7 @@ function Lib.Optimize()
 
 function Lib.MaxOptimize()
   Lib.Optimize()
-  Lib.RemoveGui
+  Lib.RemoveGui()
 end
 
 return Lib

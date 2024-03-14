@@ -16,20 +16,19 @@ function Lib.getid()
 end
 
 function Lib.TweenTp(x, y, z, speed)
-local tween_s = game:GetService('TweenService')
-local tweeninfo = TweenInfo.new(speed,Enum.EasingStyle.Linear)
-local lp = game.Players.LocalPlayer
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(speed, Enum.EasingStyle.Linear)
+  local lp = game.Players.LocalPlayer
 
-    if lp.Character and 
-    lp.Character:FindFirstChild('HumanoidRootPart') then
-        local cf = CFrame.new(Vector3.new(x, y, z))
-        local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-        a:Play()
-    end
+  if lp.Character and lp.Character:FindFirstChild('HumanoidRootPart') then
+    local cf = CFrame.new(Vector3.new(x, y, z))
+    local a = tween_s:Create(lp.Character.HumanoidRootPart, tweeninfo, {CFrame = cf})
+    a:Play()
+  end
 end
 
 function Lib.TeleportPlace(id)
-    game:GetService("TeleportService"):Teleport(id)
+  game:GetService("TeleportService"):Teleport(id)
 end
 
 function Lib.KillPlayer()
@@ -61,46 +60,46 @@ function Lib.sendtext(text)
   local args = {
     [1] = text,
     [2] = "All"
-}
+  }
 
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+  game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 end
 
 function Lib.Noclip()
   local Noclip = nil
-        local Clip = nil
-        
-        local function noclip()
-            Clip = false
-            local function Nocl()
-                if Clip == false and game.Players.LocalPlayer.Character ~= nil then
-                    for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-                        if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
-                            v.CanCollide = false
-                        end
-                    end
-                end
-                wait(0.21)
-            end
-           localNoclip = game:GetService('RunService').Stepped:Connect(Nocl)
+  local Clip = nil
+
+  local function noclip()
+    Clip = false
+    local function Nocl()
+      if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+        for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+          if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+            v.CanCollide = false
+          end
         end
-        
-        local function clip()
-            if Noclip then Noclip:Disconnect() end
-            Clip = true
-        end
-        
-        noclip()
+      end
+      wait(0.21)
+    end
+    Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+  end
+
+  local function clip()
+    if Noclip then Noclip:Disconnect() end
+    Clip = true
+  end
+
+  noclip()
 end
 
 function Lib.Optimize()
- for i,v in pairs(workspace:GetDescendants()) do
+  for i, v in pairs(workspace:GetDescendants()) do
     if v:IsA("Texture") then
-       v:Destroy()
-       elseif v:IsA("Decal") then
-       v:Destroy()
+      v:Destroy()
+    elseif v:IsA("Decal") then
+      v:Destroy()
     end
- end
+  end
 end
 
 function Lib.MaxOptimize()

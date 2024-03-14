@@ -1,5 +1,6 @@
 Lib = {
-  PlayerName = game.Players.LocalPlayer.Name
+  PlayerName = game.Players.LocalPlayer.Name,
+  Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 }
 
 function Lib.TeleportPlayer(x, y, z)
@@ -62,6 +63,33 @@ function Lib.sendtext(text)
 }
 
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+end
+
+function Lib.Noclip()
+  local Noclip = nil
+        local Clip = nil
+        
+        local function noclip()
+            Clip = false
+            local function Nocl()
+                if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+                    for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                        if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+                            v.CanCollide = false
+                        end
+                    end
+                end
+                wait(0.21)
+            end
+            Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+        end
+        
+        local function clip()
+            if Noclip then Noclip:Disconnect() end
+            Clip = true
+        end
+        
+        noclip()
 end
 
 return Lib

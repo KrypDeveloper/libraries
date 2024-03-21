@@ -1,6 +1,7 @@
 Lib = {
   PlayerName = game.Players.LocalPlayer.Name,
-  Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+  Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))(),
+  gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 }
 
 function Lib.TeleportPlayer(x, y, z)

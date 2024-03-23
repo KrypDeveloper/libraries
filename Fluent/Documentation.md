@@ -37,9 +37,6 @@ local Tabs = {
 
 ## NOTIFICATION🔔
 ```lua
-local Options = Fluent.Options
-
-do
     Fluent:Notify({
         Title = "Notification",
         Content = "This is a notification",

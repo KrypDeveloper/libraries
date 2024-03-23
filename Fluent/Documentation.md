@@ -1,18 +1,20 @@
-# FLUENT DOCUMENTATION
-### Why Use Fluent?
+# ⚠️FLUENT DOCUMENTATION⚠️
+### Why Use Fluent🤔?
 - Bealtiful
 - SaveManager
 - Secure
 - Customable
 
-## BOOTING The UI
+## BOOTING The UI🔌
 ```lua
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Fluent/Source.lua"))()
+
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ```
 
-## CREATING A WINDOW
+## CREATING A WINDOW🌍
 ```lua
 local Window = Fluent:CreateWindow({
     Title = "Fluent " .. Fluent.Version,
@@ -24,7 +26,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 ```
-## CREATING A TAB
+## CREATING A TAB🏠
 ```
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
@@ -33,7 +35,7 @@ local Tabs = {
 }
 ```
 
-## NOTIFICATION
+## NOTIFICATION🔔
 ```lua
 local Options = Fluent.Options
 
@@ -45,14 +47,14 @@ do
         Duration = 5 -- Set to nil to make the notification not disappear
     })
 ```
-## PARAGRAPH
+## PARAGRAPH#️⃣
 ```lua
     Tabs.Main:AddParagraph({
         Title = "Paragraph",
         Content = "This is a paragraph.\nSecond line!"
     })
 ```
-## CREATING A BUTTON
+## CREATING A BUTTON❗
 ```lua
     Tabs.Main:AddButton({
         Title = "Button",
@@ -80,7 +82,7 @@ do
     })
 ```
 
-## TOGGLE
+## TOGGLE✅
 ```lua
     local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
 
@@ -90,7 +92,7 @@ do
 
     Options.MyToggle:SetValue(false)
 ```
-## SLIDER
+## SLIDER⬅️➡️
 ```lua
     local Slider = Tabs.Main:AddSlider("Slider", {
         Title = "Slider",
@@ -110,7 +112,7 @@ do
 
     Slider:SetValue(3)
 ```
-## DROPDOWN
+## DROPDOWN⬇️
 ```lua
     local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
         Title = "Dropdown",
@@ -125,7 +127,7 @@ do
         print("Dropdown changed:", Value)
     end)
 ```
-## MULTI-DROPDOWN
+## MULTI-DROPDOWN⬇️
 ```lua
     local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
         Title = "Dropdown",
@@ -149,7 +151,7 @@ do
         print("Mutlidropdown changed:", table.concat(Values, ", "))
     end)
 ```
-## COLOR PICKER
+## COLOR PICKER🌈
 ```lua
     local Colorpicker = Tabs.Main:AddColorpicker("Colorpicker", {
         Title = "Colorpicker",
@@ -178,7 +180,7 @@ do
         )
     end)
 ```
-## END CODE(REQUIRED)
+## END CODE(REQUIRED)🥶
 ```lua
 Fluent:Notify({
     Title = "Fluent",

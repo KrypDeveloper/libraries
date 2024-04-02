@@ -2,7 +2,7 @@
 
 ## Importar
 ```lua
-local LSU = loadstring(game:HttpGet("")()
+local LSU = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/LSU/LSU.lua")()
 ```
 ## Teleportar Jogador
 ```lua

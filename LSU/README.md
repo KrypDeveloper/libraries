@@ -45,4 +45,5 @@ LSU.noclip(true) --coloque true para ativar e false para desativar
 ```lua
 LSU.Execute({
 elemento1 = game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+})
 ```

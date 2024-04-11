@@ -140,7 +140,7 @@ local Drag = tabela.Draggable
 Frame.Active = Drag
 Frame.Draggable = Drag
 Frame.Selectable = Drag
-TextLabel.Text = nome
+TextLabel.Text = tabela.Name
 end
 
 function LSU.CreateTab(a, b)

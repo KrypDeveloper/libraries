@@ -1,3 +1,4 @@
+
 LSU = {
     PlayerName = game.Players.LocalPlayer.Name,
     Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))(),
@@ -83,16 +84,13 @@ end
 --INTERFACE GUI/UI
 
 function LSU.CreateWindow(tabela)
-  -- Gui to Lua
--- Version: 3.2
-
--- Instances:
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
 local Tabs = Instance.new("ScrollingFrame")
 local Folder = Instance.new("Folder")
+    
 
 --Properties:
 
@@ -141,13 +139,16 @@ Frame.Active = Drag
 Frame.Draggable = Drag
 Frame.Selectable = Drag
 TextLabel.Text = tabela.Name
+
 end
 
 function LSU.CreateTab(a, b)
+    local tabarg = Instance.new("Folder")
   local function button(nome, identificador)
     local btn Instance.new("TextButton").Text = nome 
     btn.Position = UDim2.new(0.1, getgenv().abapos,0, 0)
    local Frame = Instance.new("Frame")
+   tabarg.Parent = Frame
    Frame.Name = identificador
    Frame.Parent = ScreenGui
    Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)

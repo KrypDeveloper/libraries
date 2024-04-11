@@ -1,4 +1,4 @@
-
+getgenv().abapos = 0
 LSU = {
     PlayerName = game.Players.LocalPlayer.Name,
     Orion = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))(),

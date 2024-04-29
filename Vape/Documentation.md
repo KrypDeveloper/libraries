@@ -100,5 +100,5 @@ Tab:Label("Label")
 ```
 ## Change UI Color🟥🟦🟨
 ```lua
-Vape:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
+Vape:ChangePresetColor(Color3.fromRGB(255,255,255))
 ```

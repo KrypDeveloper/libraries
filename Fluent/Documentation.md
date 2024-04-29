@@ -42,14 +42,14 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## PARAGRAPH#️⃣
 ```lua
-    Tabs.Main:AddParagraph({
+    Tab:AddParagraph({
         Title = "Paragraph",
         Content = "This is a paragraph.\nSecond line!"
     })
 ```
 ## CREATING A BUTTON❗
 ```lua
-    Tabs.Main:AddButton({
+    Tab:AddButton({
         Title = "Button",
         Description = "Very important button",
         Callback = function()
@@ -77,7 +77,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 
 ## TOGGLE✅
 ```lua
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
+    local Toggle = Tab:AddToggle("MyToggle", {Title = "Toggle", Default = false })
 
     Toggle:OnChanged(function()
         print("Toggle changed:", Options.MyToggle.Value)
@@ -87,7 +87,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## SLIDER⬅️➡️
 ```lua
-    local Slider = Tabs.Main:AddSlider("Slider", {
+    local Slider = Tab:AddSlider("Slider", {
         Title = "Slider",
         Description = "This is a slider",
         Default = 2,
@@ -107,7 +107,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## DROPDOWN⬇️
 ```lua
-    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+    local Dropdown = Tab:AddDropdown("Dropdown", {
         Title = "Dropdown",
         Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
         Multi = false,
@@ -122,7 +122,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## MULTI-DROPDOWN⬇️
 ```lua
-    local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
+    local MultiDropdown = Tab:AddDropdown("MultiDropdown", {
         Title = "Dropdown",
         Description = "You can select multiple values.",
         Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
@@ -146,7 +146,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## COLOR PICKER🌈
 ```lua
-    local Colorpicker = Tabs.Main:AddColorpicker("Colorpicker", {
+    local Colorpicker = Tab:AddColorpicker("Colorpicker", {
         Title = "Colorpicker",
         Default = Color3.fromRGB(96, 205, 255)
     })
@@ -159,7 +159,7 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 
 
 
-    local TColorpicker = Tabs.Main:AddColorpicker("TransparencyColorpicker", {
+    local TColorpicker = Tab:AddColorpicker("TransparencyColorpicker", {
         Title = "Colorpicker",
         Description = "but you can change the transparency.",
         Transparency = 0,
@@ -175,13 +175,5 @@ local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 ## END CODE(REQUIRED)🥶
 ```lua
-Fluent:Notify({
-    Title = "Fluent",
-    Content = "The script has been loaded.",
-    Duration = 8
-})
-
--- You can use the SaveManager:LoadAutoloadConfig() to load a config
--- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
 ```

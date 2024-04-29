@@ -28,7 +28,7 @@ local Window = Fluent:CreateWindow({
 ```
 ## CREATING A TAB🏠
 ```lua
-local Tab = Window:AddTab({ Title = "Main", Icon = "" }),
+local Tab = Window:AddTab({ Title = "Main", Icon = "" })
 ```
 
 ## NOTIFICATION🔔

@@ -31,7 +31,7 @@ end)
 ```
 ## Notification💡
 ```lua
-lib:Notification(
+Vape:Notification(
   "Vape", --Title
   "Hello!", --Content
   "Hi!" --SubContent
@@ -78,7 +78,7 @@ Tab:Colorpicker(
 ```
 ## TextBox📝
 ```lua
-tab:Textbox("Textbox", --Name
+Tab:Textbox("Textbox", --Name
   true, function(Value) --Callback
     print(Value)
   end

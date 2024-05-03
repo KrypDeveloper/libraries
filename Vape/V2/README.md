@@ -9,7 +9,7 @@
 
 ## Init🔌
 ```lua
-local Vape = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
+local Vape = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Vape/V2/source.lua")()
 ```
 ## Window✨
 ```lua

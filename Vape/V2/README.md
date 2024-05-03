@@ -18,7 +18,7 @@ local Vape = loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeve
 ```
 ## Window✨
 ```lua
-local Window = Vape:Window(
+local Window = Vape:Window({
 Name = "Vape Test",
 Color = Color3.fromRGB(44, 120, 224),
 KeyCode = Enum.KeyCode.RightControl,
@@ -27,7 +27,7 @@ KeySystemSettings = {
     AutoLogin = true,
     Active = true
 }
-)
+})
 ```
 ## Tab🚪
 ```lua

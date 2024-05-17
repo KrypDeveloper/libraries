@@ -4,20 +4,12 @@ end
 
 Cosmos = {}
 
-function Cosmos:Make(template)
-    return function()
-        local className = template.ClassName
-        if not className then
-            error("Template missing 'ClassName' field")
-        end
-        local instance = a(className)
-        for attribute, value in pairs(template) do
-            if attribute ~= "ClassName" then
-                instance[attribute] = value
-            end
-        end
-        return instance
-    end
+local function Cosmos:Make(ClassName, Values)
+   local instance = Instance.new(ClassName)
+   for a,b in pairs(Values) do
+       instance[a] = b
+   end
+   return instance
 end
 
 return Cosmos

@@ -1,3 +1,4 @@
+--If you want to test use loadstring(game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Cosmos/example.lua"))()
 local Cosmos = loadstring(
     game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Cosmos/source.luau")
 ))()

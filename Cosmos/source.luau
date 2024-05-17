@@ -4,7 +4,7 @@ end
 
 Cosmos = {}
 
-local function Cosmos:Make(ClassName, Values)
+function Cosmos:Make(ClassName, Values)
    local instance = Instance.new(ClassName)
    for a,b in pairs(Values) do
        instance[a] = b

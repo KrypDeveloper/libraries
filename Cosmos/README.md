@@ -20,6 +20,9 @@
  For work Cosmos need loadstring and HttpGet or require in your LUAU Space
  if you luau space not Support directly require or loadstring and HttpGet
  you can Direct import code into your LUAU Space puthing this in start of you code
+
+</div>
+
  ```lua
 local function CosmosMake(ClassName, Values)
     local instance = Instance.new(ClassName)
@@ -29,4 +32,3 @@ local function CosmosMake(ClassName, Values)
     return instance
 end
 ```
-</div>

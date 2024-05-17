@@ -4,8 +4,9 @@
 
 ### *What is "Cosmos"?*
 
-``Cosmos is an Open Source Project to organize and make him more beautiful to humans``
-
+```
+Cosmos is an Open Source Project to organize and make him more beautiful to humans
+```
 </div>
 <div align="center">
   Observation: Cosmos was inspired in project
@@ -15,15 +16,17 @@
   </button>
 </a>
  made by uniquadev 
+  
+<div align="center">
 
-  # OBSERVATIONS
- For work Cosmos need loadstring and HttpGet or require in your LUAU Space
- if you luau space not Support directly require or loadstring and HttpGet
- you can Direct import code into your LUAU Space puthing this in start of you code
+Observation: Cosmos was inspired by the project [GuiToLua](https://github.com/uniquadev/GuiToLuaConverter) made by uniquadev.
 
-</div>
+## [Check Example too](https://github.com/KrypDeveloper/MAXIMUS-LIBRARY/blob/main/Cosmos/example.lua)
 
- ```lua
+## OBSERVATIONS
+For Cosmos to work, it needs `loadstring` and `HttpGet` or `require` in your LUAU Space. If your LUAU Space does not support `require` or `loadstring` and `HttpGet` directly, you can directly import the code into your LUAU Space by putting this at the start of your code:
+
+```lua
 local function CosmosMake(ClassName, Values)
     local instance = Instance.new(ClassName)
     for a,b in pairs(Values) do

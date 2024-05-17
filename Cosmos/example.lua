@@ -3,17 +3,10 @@ local Cosmos = loadstring(
     game:HttpGet("https://raw.githubusercontent.com/KrypDeveloper/MAXIMUS-LIBRARY/main/Cosmos/source.luau")
 ))()
 
-local MyElement = Cosmos:Make("Part",{
-    Size = Vector3.new(4, 1, 2),
-    Color = Color3.fromRGB(255, 0, 0)
-})
-
-MyElement.Parent = workspace
-
 --Making UI
 
-local ScreenGui = Cosmos:Make("Part",{
-    Name = "Part"
+local ScreenGui = Cosmos:Make("ScreenGui",{
+    Name = "ScreenGui"
 })
 
 ScreenGui.Parent = gethui()
@@ -28,4 +21,4 @@ local UiCorner = Cosmos:Make("UICorner", {
     Name = 'UICorner'
 })
 
-UiCorner.Parent = Canvas()
+UiCorner.Parent = Canvas

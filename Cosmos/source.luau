@@ -1,7 +1,3 @@
-local function a(className)
-    return Instance.new(className)
-end
-
 Cosmos = {}
 
 function Cosmos:Make(ClassName, Values)

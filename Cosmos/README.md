@@ -20,8 +20,6 @@ Cosmos is an Open Source Project to organize and make him more beautiful to huma
   
 <div>
 
-Observation: Cosmos was inspired by the project [GuiToLua](https://github.com/uniquadev/GuiToLuaConverter) made by uniquadev.
-
 ## [Check Example too](https://github.com/KrypDeveloper/MAXIMUS-LIBRARY/blob/main/Cosmos/example.lua)
 
 ## OBSERVATIONS

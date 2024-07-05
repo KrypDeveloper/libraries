@@ -232,7 +232,7 @@ local function AddDraggingFunctionality(DragPoint, Main)
 	end)
 end   
 
-AddDragingFuncionality(Main,Main)
+AddDragingFuncionality(Rayfield.Main,Rayfield.Main)
 
 local function PackColor(Color)
 	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}

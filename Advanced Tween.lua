@@ -10,7 +10,7 @@ function Module:Tween(Instance, To)
   local tween = TweenService:Create(
     Instance,
     TweenInfo,
-    {Propertie = To}
+    {CFrame = To}
   )
   return tween
 end

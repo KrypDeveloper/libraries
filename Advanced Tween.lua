@@ -1,9 +1,9 @@
 local TweenService = game:GetService("TweenService")
 Module = {}
 
-function Module:Tween(Instance, Propertie, To)
+function Module:Tween(Instance, To)
   local TweenInfo = TweenInfo.new(
-    (Instance[Propertie] - To),
+    (Instance.Position - To),
     Enum.EasingStyle.Linear
   )
   

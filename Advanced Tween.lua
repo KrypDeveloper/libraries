@@ -3,7 +3,7 @@ Module = {}
 
 function Module:Tween(Instance, To)
   local TweenInfo = TweenInfo.new(
-    (Instance.Position - To),
+    (CFrame.new(Instance.Position) - To).Magnitude,
     Enum.EasingStyle.Linear
   )
   

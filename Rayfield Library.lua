@@ -183,6 +183,9 @@ function ChangeTheme(ThemeName)
 	end
 
 	Rayfield.Main.BackgroundColor3 = SelectedTheme.Background
+	Rayfield.Main.Draggable = true
+	Rayfield.Main.Selectable = true
+	Rayfield.Main.Active = true
 	Rayfield.Main.Topbar.BackgroundColor3 = SelectedTheme.Topbar
 	Rayfield.Main.Topbar.CornerRepair.BackgroundColor3 = SelectedTheme.Topbar
 	Rayfield.Main.Shadow.Image.ImageColor3 = SelectedTheme.Shadow
